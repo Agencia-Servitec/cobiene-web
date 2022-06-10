@@ -1,32 +1,33 @@
 import React from "react";
 import styled from "styled-components";
-import { ImgDefault } from "../../images";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlay } from "@fortawesome/free-solid-svg-icons";
+import {ImgDefault, BannerJace, BannerJas} from "../../images";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faPlay} from "@fortawesome/free-solid-svg-icons";
 
-export const Department = () => {
-  return (
-    <Container>
-      <div className="item-picture">
-        <img src={ImgDefault} alt="Image" />
-      </div>
-      <div className="item-title-card">
-        <h4>Jefatura de Administración de Casas del Ejercito</h4>
-      </div>
-      <div className="footer-card">
-        <div className="blog-divider-wrapper">
-          <div className="blog-divider" />
-        </div>
-        <div className="item-bottom">
-          <div className="item-more">
-            <div className="bottom-txt">
-              <h5>VER MÁS</h5> <FontAwesomeIcon icon={faPlay} />
+export const Department = ({banner, title, url, titleLarge}) => {
+    return (
+        <Container>
+            <div className="item-picture">
+                <img src={banner || ImgDefault} alt="Image"/>
             </div>
-          </div>
-        </div>
-      </div>
-    </Container>
-  );
+            <div className="item-title-card">
+                <h4> {titleLarge} </h4>
+            </div>
+            <div className="footer-card">
+                <div className="blog-divider-wrapper">
+                    <div className="blog-divider"/>
+                </div>
+                <div className="item-bottom">
+                    <div className="item-more">
+                        <div className="bottom-txt">
+                            <a href={url} target="_blank"><h5>VER MÁS</h5> <FontAwesomeIcon icon={faPlay}/></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </Container>
+
+    );
 };
 
 const Container = styled.div`
@@ -34,11 +35,11 @@ const Container = styled.div`
   background: radial-gradient(100% 100% at 50.52% 0%, #686868 0%, #000000 100%);
   box-shadow: 0 10px 20px rgb(0 0 0 / 5%);
   border-radius: 8px;
-  min-height: 25rem;
+  min-height: 23rem;
   max-height: 25rem;
   width: 100%;
   max-width: calc(33.3333% - 6rem);
-  margin: 0 10px 20px;
+  margin: 0 20px 20px;
   overflow: hidden;
 
   .item-picture {
@@ -142,9 +143,16 @@ const Container = styled.div`
           align-items: center;
           justify-content: flex-start;
 
-          h5 {
-            margin: 0 0.3rem 0 0;
+          a {
+            display: flex;
+            align-items: center;
+            color: #fff;
+
+            h5 {
+              margin: 0 0.3rem 0 0;
+            }
           }
+
         }
       }
     }

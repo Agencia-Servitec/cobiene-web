@@ -1,4 +1,4 @@
-import { css, createGlobalStyle } from "styled-components";
+import {css, createGlobalStyle} from "styled-components";
 
 const global = css`
   * {
@@ -7,10 +7,16 @@ const global = css`
     box-sizing: border-box;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     font-size: 16px;
     background: #181818;
     color: #fff;
+    font-smoothing: antialiased;
+
   }
 
   h1 {

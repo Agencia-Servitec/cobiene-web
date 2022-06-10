@@ -1,22 +1,25 @@
 import React from "react";
 import styled from "styled-components";
-import { Department } from "./Department";
+import {Department} from "./Department";
+import {departments} from "../../data-list"
 
 export const Departments = () => {
-  return (
-    <Container>
-      <h1>NUESTROS DEPARTAMENTOS</h1>
-      <hr />
-      <WrapperDepartments>
-        <Department />
-        <Department />
-        <Department />
-        <Department />
-        <Department />
-        <Department />
-      </WrapperDepartments>
-    </Container>
-  );
+
+    console.log("departments:", departments);
+
+    return (
+        <Container id="Departments">
+            <h1>NUESTROS DEPARTAMENTOS</h1>
+            <hr/>
+            <WrapperDepartments>
+
+                {departments.map((department,index) =>
+                    <Department key={index} titleLarge={department.titleLarge} banner={department.banner} title={department.title} url={department.url}/>
+                    )}
+
+            </WrapperDepartments>
+        </Container>
+    );
 };
 
 const Container = styled.div`
@@ -24,11 +27,13 @@ const Container = styled.div`
   height: auto;
   padding: 1rem;
   position: relative;
+
   h1 {
     color: #fff;
     margin: 5rem 0 3rem 0;
     text-align: center;
   }
+
   hr {
     max-width: 23rem;
     width: auto;

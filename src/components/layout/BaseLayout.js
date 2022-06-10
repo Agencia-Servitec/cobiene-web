@@ -1,24 +1,36 @@
 import styled from "styled-components";
-import { CobieneLogoLarge } from "../../images";
+import {CobieneLogoLarge} from "../../images";
 
-export const BaseLayout = ({ children }) => {
-  return (
-    <Container>
-      <div className="header">
-        <div className="menu-list">
-          <li>INICIO</li>
-          <li>NOSOTROS</li>
-          <li>
-            <img src={CobieneLogoLarge} alt="Cobiene logo" />
-          </li>
-          <li>DEPARTAMENTOS</li>
-          <li>CONTÁCTO</li>
-        </div>
-      </div>
-      <div className="body">{children}</div>
-      {/*<div className="footer">Todos los derechos reservados</div>*/}
-    </Container>
-  );
+export const BaseLayout = ({children}) => {
+    return (
+        <Container>
+            <div className="header">
+                <div className="menu-list">
+                    <a href="#">
+                        <li>
+                            INICIO
+                        </li>
+                    </a>
+                    <a href="#Contact">
+                        <li>NOSOTROS</li>
+                    </a>
+                    <a>
+                        <li>
+                            <img src={CobieneLogoLarge} alt="Cobiene logo"/>
+                        </li>
+                    </a>
+                    <a href="#Departments">
+                        <li>DEPARTAMENTOS</li>
+                    </a>
+                    <a>
+                        <li>CONTÁCTO</li>
+                    </a>
+                </div>
+            </div>
+            <div className="body">{children}</div>
+            {/*<div className="footer">Todos los derechos reservados</div>*/}
+        </Container>
+    );
 };
 
 const Container = styled.div`
@@ -26,6 +38,7 @@ const Container = styled.div`
   min-height: 100vh;
   height: auto;
   position: relative;
+
   .header {
     position: absolute;
     width: 100%;
@@ -38,16 +51,19 @@ const Container = styled.div`
     left: 0;
     right: 0;
     z-index: 500;
+
     .menu-list {
       list-style: none;
       display: flex;
       justify-content: space-between;
       align-items: center;
+
       li {
         color: #fff;
         margin: 0.7rem 1.7rem;
         font-weight: bold;
         font-size: 1.2rem;
+
         img {
           width: 5rem;
           height: auto;

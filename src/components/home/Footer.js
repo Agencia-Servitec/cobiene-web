@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import { CobieneLogoLarge } from "../../images";
-import { faPlay } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {CobieneLogoLarge} from "../../images";
+import {faFacebook, faLinkedinIn, faTwitter, faWhatsapp} from "@fortawesome/free-brands-svg-icons";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 export const Footer = () => {
   return (
@@ -37,16 +37,16 @@ export const Footer = () => {
       <div className="items-socials">
         <ul>
           <li>
-            <FontAwesomeIcon icon={faPlay} />
+            <FontAwesomeIcon icon={faWhatsapp} />
           </li>
           <li>
-            <FontAwesomeIcon icon={faPlay} />
+            <FontAwesomeIcon icon={faLinkedinIn} />
           </li>
           <li>
-            <FontAwesomeIcon icon={faPlay} />
+            <FontAwesomeIcon icon={faTwitter} />
           </li>
           <li>
-            <FontAwesomeIcon icon={faPlay} />
+            <FontAwesomeIcon icon={faFacebook} />
           </li>
         </ul>
       </div>
