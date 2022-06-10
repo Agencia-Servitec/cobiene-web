@@ -1,16 +1,30 @@
+import React, { useState } from "react";
 import styled from "styled-components";
 import { CobieneLogoLarge } from "../../images";
 import { useDevice } from "../../hooks";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { Drawer } from "./Drawer";
 
 export const BaseLayout = ({ children }) => {
   const { isMobile } = useDevice();
 
+  const [visibleDrawer, setVisibleDrawer] = useState(false);
+
   return (
     <Container>
-      {isMobile ? (
-        <>Menu mobile</>
-      ) : (
-        <div className="header">
+      <Drawer
+        visibleDrawer={visibleDrawer}
+        onSetVisibleDrawer={setVisibleDrawer}
+      />
+      <div className="header">
+        {isMobile ? (
+          <div className="menu-mobile">
+            <div className="icon-bar" onClick={() => setVisibleDrawer(true)}>
+              <FontAwesomeIcon icon={faBars} size="2x" />
+            </div>
+          </div>
+        ) : (
           <div className="menu-list">
             <a href="#">
               <li>INICIO</li>
@@ -30,8 +44,8 @@ export const BaseLayout = ({ children }) => {
               <li>CONTÁCTO</li>
             </a>
           </div>
-        </div>
-      )}
+        )}
+      </div>
       <div className="body">{children}</div>
       {/*<div className="footer">Todos los derechos reservados</div>*/}
     </Container>
@@ -73,6 +87,18 @@ const Container = styled.div`
           width: 5rem;
           height: auto;
         }
+      }
+    }
+    .menu-mobile {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      color: #fff;
+      .icon-bar {
+        width: auto;
+        height: 100%;
+        padding: 0.7rem 0.1rem 0.7rem 1.7rem;
       }
     }
   }
