@@ -58,10 +58,12 @@ const Container = styled.div`
     .title,
     .description {
       text-align: right;
+      font-family: "MontserratRegular";
     }
     .title {
       font-weight: 600;
       margin-bottom: 2rem;
+      font-family: "MontserratRegular";
     }
     .description {
       max-width: 40rem;

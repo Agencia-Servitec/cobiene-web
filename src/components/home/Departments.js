@@ -33,6 +33,7 @@ const Container = styled.div`
     color: #fff;
     margin: 5rem 0 3rem 0;
     text-align: center;
+    font-family: "MontserratRegular";
   }
 
   hr {

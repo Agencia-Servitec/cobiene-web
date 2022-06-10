@@ -75,6 +75,7 @@ const Container = styled.div`
       position: absolute;
       margin: auto;
       text-transform: uppercase;
+      font-family: "AudiowideRegular";
     }
   }
 

@@ -76,12 +76,15 @@ const Container = styled.div`
       display: flex;
       justify-content: space-between;
       align-items: center;
+      
+    
 
       li {
         color: #fff;
         margin: 0.7rem 1.7rem;
         font-weight: bold;
         font-size: 1.2rem;
+        font-family: "MontserratRegular";
 
         img {
           width: 5rem;

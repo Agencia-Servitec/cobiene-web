@@ -1,5 +1,5 @@
-import { css, createGlobalStyle } from "styled-components";
-import { mediaQuery } from "../constants/mediaQuery";
+import {css, createGlobalStyle} from "styled-components";
+import {mediaQuery} from "../constants/mediaQuery";
 
 const global = css`
   * {
@@ -26,19 +26,23 @@ const global = css`
   h5,
   h6 {
     color: #fff;
+    font-family: "MontserratRegular";
   }
 
   h1 {
     font-size: 2.2rem;
     font-weight: bold;
+  }
+
     ${mediaQuery.minTablet} {
       font-size: 2.5rem;
-    }
+      
   }
 
   h2 {
     font-size: 1.8rem;
     font-weight: bold;
+
     ${mediaQuery.minTablet} {
       font-size: 2rem;
     }
