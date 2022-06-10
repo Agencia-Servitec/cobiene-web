@@ -1,36 +1,34 @@
 import styled from "styled-components";
-import {CobieneLogoLarge} from "../../images";
+import { CobieneLogoLarge } from "../../images";
 
-export const BaseLayout = ({children}) => {
-    return (
-        <Container>
-            <div className="header">
-                <div className="menu-list">
-                    <a href="#">
-                        <li>
-                            INICIO
-                        </li>
-                    </a>
-                    <a href="#Contact">
-                        <li>NOSOTROS</li>
-                    </a>
-                    <a>
-                        <li>
-                            <img src={CobieneLogoLarge} alt="Cobiene logo"/>
-                        </li>
-                    </a>
-                    <a href="#Departments">
-                        <li>DEPARTAMENTOS</li>
-                    </a>
-                    <a>
-                        <li>CONTÁCTO</li>
-                    </a>
-                </div>
-            </div>
-            <div className="body">{children}</div>
-            {/*<div className="footer">Todos los derechos reservados</div>*/}
-        </Container>
-    );
+export const BaseLayout = ({ children }) => {
+  return (
+    <Container>
+      <div className="header">
+        <div className="menu-list">
+          <a href="#">
+            <li>INICIO</li>
+          </a>
+          <a href="#about-us">
+            <li>NOSOTROS</li>
+          </a>
+          <a href="#">
+            <li>
+              <img src={CobieneLogoLarge} alt="Cobiene logo" />
+            </li>
+          </a>
+          <a href="#departments">
+            <li>DEPARTAMENTOS</li>
+          </a>
+          <a href="#contact">
+            <li>CONTÁCTO</li>
+          </a>
+        </div>
+      </div>
+      <div className="body">{children}</div>
+      {/*<div className="footer">Todos los derechos reservados</div>*/}
+    </Container>
+  );
 };
 
 const Container = styled.div`

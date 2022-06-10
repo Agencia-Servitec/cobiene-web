@@ -1,11 +1,18 @@
 import React from "react";
 import styled from "styled-components";
-import { Carousel, Contact, Departments, Footer } from "../../components";
+import {
+  AboutUs,
+  Carousel,
+  Contact,
+  Departments,
+  Footer,
+} from "../../components";
 
 export const Home = () => {
   return (
     <Container>
       <Carousel />
+      <AboutUs />
       <WrapperComponents>
         <Departments />
       </WrapperComponents>

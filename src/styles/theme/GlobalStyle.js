@@ -1,4 +1,4 @@
-import {css, createGlobalStyle} from "styled-components";
+import { css, createGlobalStyle } from "styled-components";
 
 const global = css`
   * {
@@ -15,8 +15,7 @@ const global = css`
     font-size: 16px;
     background: #181818;
     color: #fff;
-    font-smoothing: antialiased;
-
+    font-family: "UbuntuMedium", serif;
   }
 
   h1 {

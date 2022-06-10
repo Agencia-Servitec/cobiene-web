@@ -1,0 +1,65 @@
+@font-face {
+  font-family: "UbuntuItalic";
+  src: url(Ubuntu/Ubuntu-Italic.ttf) format("ttf"),
+    url(Ubuntu/Ubuntu-Italic.ttf) format("truetype");
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "UbuntuLight";
+  src: url(Ubuntu/Ubuntu-Light.ttf) format("ttf"),
+    url(Ubuntu/Ubuntu-Light.ttf) format("truetype");
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "UbuntuLightItalic";
+  src: url(Ubuntu/Ubuntu-LightItalic.ttf) format("ttf"),
+    url(Ubuntu/Ubuntu-LightItalic.ttf) format("truetype");
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "UbuntuRegular";
+  src: url(Ubuntu/Ubuntu-Regular.ttf) format("ttf"),
+    url(Ubuntu/Ubuntu-Regular.ttf) format("truetype");
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "UbuntuMedium";
+  src: url(Ubuntu/Ubuntu-Medium.ttf) format("ttf"),
+    url(Ubuntu/Ubuntu-Medium.ttf) format("truetype");
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "UbuntuMediumItalic";
+  src: url(Ubuntu/Ubuntu-MediumItalic.ttf) format("ttf"),
+    url(Ubuntu/Ubuntu-MediumItalic.ttf) format("truetype");
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "UbuntuBold";
+  src: url(Ubuntu/Ubuntu-Bold.ttf) format("ttf"),
+    url(Ubuntu/Ubuntu-Bold.ttf) format("truetype");
+  font-style: normal;
+  font-display: swap;
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: "UbuntuBoldItalic";
+  src: url(Ubuntu/Ubuntu-BoldItalic.ttf) format("ttf"),
+    url(Ubuntu/Ubuntu-BoldItalic.ttf) format("truetype");
+  font-style: normal;
+  font-display: swap;
+  font-weight: 800;
+}

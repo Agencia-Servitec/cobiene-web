@@ -1,33 +1,35 @@
 import React from "react";
 import styled from "styled-components";
-import {ImgDefault, BannerJace, BannerJas} from "../../images";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faPlay} from "@fortawesome/free-solid-svg-icons";
+import { ImgDefault, BannerJace, BannerJas } from "../../images";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlay } from "@fortawesome/free-solid-svg-icons";
 
-export const Department = ({banner, title, url, titleLarge}) => {
-    return (
-        <Container>
-            <div className="item-picture">
-                <img src={banner || ImgDefault} alt="Image"/>
+export const Department = ({ banner, title, url, titleLarge }) => {
+  return (
+    <Container>
+      <div className="item-picture">
+        <img src={banner || ImgDefault} alt="Image" />
+        <h1 className="item-department-name">{title}</h1>
+      </div>
+      <div className="item-title-card">
+        <h4> {titleLarge} </h4>
+      </div>
+      <div className="footer-card">
+        <div className="blog-divider-wrapper">
+          <div className="blog-divider" />
+        </div>
+        <div className="item-bottom">
+          <div className="item-more">
+            <div className="bottom-txt">
+              <a href={url} target="_blank">
+                <h5>VER MÁS</h5> <FontAwesomeIcon icon={faPlay} />
+              </a>
             </div>
-            <div className="item-title-card">
-                <h4> {titleLarge} </h4>
-            </div>
-            <div className="footer-card">
-                <div className="blog-divider-wrapper">
-                    <div className="blog-divider"/>
-                </div>
-                <div className="item-bottom">
-                    <div className="item-more">
-                        <div className="bottom-txt">
-                            <a href={url} target="_blank"><h5>VER MÁS</h5> <FontAwesomeIcon icon={faPlay}/></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </Container>
-
-    );
+          </div>
+        </div>
+      </div>
+    </Container>
+  );
 };
 
 const Container = styled.div`
@@ -38,8 +40,6 @@ const Container = styled.div`
   min-height: 23rem;
   max-height: 25rem;
   width: 100%;
-  max-width: calc(33.3333% - 6rem);
-  margin: 0 20px 20px;
   overflow: hidden;
 
   .item-picture {
@@ -49,11 +49,32 @@ const Container = styled.div`
     width: 100%;
     height: auto;
     overflow: hidden;
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:before {
+      content: "";
+      background: rgba(0, 0, 0, 0.35);
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
     img {
       width: 100%;
       height: 12rem;
       object-fit: cover;
+    }
+    .item-department-name {
+      color: #fff;
+      font-size: 3rem;
+      text-align: center;
+      position: absolute;
+      margin: auto;
+      text-transform: uppercase;
     }
   }
 
@@ -152,7 +173,6 @@ const Container = styled.div`
               margin: 0 0.3rem 0 0;
             }
           }
-
         }
       }
     }

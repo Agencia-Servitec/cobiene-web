@@ -4,7 +4,7 @@ import { BannerContact } from "../../images";
 
 export const Contact = () => {
   return (
-    <Container id="Contact">
+    <Container id="contact">
       <div className="content-items">
         <h1 className="title">Contáctanos</h1>
         <div className="form-content">

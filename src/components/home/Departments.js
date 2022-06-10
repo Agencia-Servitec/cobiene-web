@@ -1,25 +1,26 @@
 import React from "react";
 import styled from "styled-components";
-import {Department} from "./Department";
-import {departments} from "../../data-list"
+import { Department } from "./Department";
+import { departments } from "../../data-list";
 
 export const Departments = () => {
-
-    console.log("departments:", departments);
-
-    return (
-        <Container id="Departments">
-            <h1>NUESTROS DEPARTAMENTOS</h1>
-            <hr/>
-            <WrapperDepartments>
-
-                {departments.map((department,index) =>
-                    <Department key={index} titleLarge={department.titleLarge} banner={department.banner} title={department.title} url={department.url}/>
-                    )}
-
-            </WrapperDepartments>
-        </Container>
-    );
+  return (
+    <Container id="departments">
+      <h1>NUESTROS DEPARTAMENTOS</h1>
+      <hr />
+      <WrapperDepartments>
+        {departments.map((department, index) => (
+          <Department
+            key={index}
+            titleLarge={department.titleLarge}
+            banner={department.banner}
+            title={department.title}
+            url={department.url}
+          />
+        ))}
+      </WrapperDepartments>
+    </Container>
+  );
 };
 
 const Container = styled.div`
@@ -45,7 +46,10 @@ const Container = styled.div`
 `;
 
 const WrapperDepartments = styled.div`
-  display: flex;
+  display: grid;
   justify-content: center;
   flex-wrap: wrap;
+
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  grid-gap: 1.5rem;
 `;
