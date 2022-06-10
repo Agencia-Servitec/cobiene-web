@@ -1,30 +1,37 @@
 import styled from "styled-components";
 import { CobieneLogoLarge } from "../../images";
+import { useDevice } from "../../hooks";
 
 export const BaseLayout = ({ children }) => {
+  const { isMobile } = useDevice();
+
   return (
     <Container>
-      <div className="header">
-        <div className="menu-list">
-          <a href="#">
-            <li>INICIO</li>
-          </a>
-          <a href="#about-us">
-            <li>NOSOTROS</li>
-          </a>
-          <a href="#">
-            <li>
-              <img src={CobieneLogoLarge} alt="Cobiene logo" />
-            </li>
-          </a>
-          <a href="#departments">
-            <li>DEPARTAMENTOS</li>
-          </a>
-          <a href="#contact">
-            <li>CONTÁCTO</li>
-          </a>
+      {isMobile ? (
+        <>Menu mobile</>
+      ) : (
+        <div className="header">
+          <div className="menu-list">
+            <a href="#">
+              <li>INICIO</li>
+            </a>
+            <a href="#about-us">
+              <li>NOSOTROS</li>
+            </a>
+            <a href="#">
+              <li>
+                <img src={CobieneLogoLarge} alt="Cobiene logo" />
+              </li>
+            </a>
+            <a href="#departments">
+              <li>DEPARTAMENTOS</li>
+            </a>
+            <a href="#contact">
+              <li>CONTÁCTO</li>
+            </a>
+          </div>
         </div>
-      </div>
+      )}
       <div className="body">{children}</div>
       {/*<div className="footer">Todos los derechos reservados</div>*/}
     </Container>

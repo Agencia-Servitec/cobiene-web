@@ -1,6 +1,6 @@
 import React from "react";
 import AntCarousel from "antd/lib/carousel";
-import { Slider1, Slider2 } from "../../images";
+import { Slider1, Slider2, Slider3 } from "../../images";
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -30,6 +30,12 @@ export const Carousel = () => {
         />
         <Slide
           src={Slider2}
+          width={isMobile ? "768" : "992"}
+          height="670"
+          alt="Banner cobiene"
+        />
+        <Slide
+          src={Slider3}
           width={isMobile ? "768" : "992"}
           height="670"
           alt="Banner cobiene"
@@ -66,10 +72,14 @@ const Container = styled.div`
   .slick-dots-bottom {
     bottom: 1px;
     ${mediaQuery.minDesktop} {
-      bottom: 30px;
+      bottom: 4rem;
     }
   }
   .slick-dots {
+    display: none !important;
+    ${mediaQuery.minTablet} {
+      display: flex !important;
+    }
     li.slick-active {
       width: 48px;
     }

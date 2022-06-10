@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { ImgDefault, BannerJace, BannerJas } from "../../images";
+import { ImgDefault } from "../../images";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlay } from "@fortawesome/free-solid-svg-icons";
 
@@ -81,8 +81,11 @@ const Container = styled.div`
   .item-title-card {
     width: 100%;
     height: auto;
+    min-height: 5.5rem;
     padding: 1rem 0.7rem;
-
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
     h4 {
       margin: 0;
     }

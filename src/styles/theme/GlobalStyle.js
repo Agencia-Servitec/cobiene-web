@@ -1,4 +1,5 @@
 import { css, createGlobalStyle } from "styled-components";
+import { mediaQuery } from "../constants/mediaQuery";
 
 const global = css`
   * {
@@ -18,14 +19,29 @@ const global = css`
     font-family: "UbuntuMedium", serif;
   }
 
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: #fff;
+  }
+
   h1 {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     font-weight: bold;
+    ${mediaQuery.minTablet} {
+      font-size: 2.5rem;
+    }
   }
 
   h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: bold;
+    ${mediaQuery.minTablet} {
+      font-size: 2rem;
+    }
   }
 
   h3 {
@@ -34,7 +50,7 @@ const global = css`
   }
 
   h4 {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-weight: bold;
   }
 
@@ -50,12 +66,8 @@ const global = css`
 
   h1,
   h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    line-height: 1.5rem;
-    color: #fff;
+  h3 {
+    line-height: 2.7rem;
   }
 `;
 

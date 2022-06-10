@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { BannerContact } from "../../images";
+import { mediaQuery } from "../../styles/constants/mediaQuery";
 
 export const Contact = () => {
   return (
@@ -28,8 +29,11 @@ const Container = styled.div`
     #000000 47.21%,
     rgba(0, 0, 0, 0.48) 77.8%
   );
-  padding: 1rem 5rem;
+  padding: 1rem;
   position: relative;
+  ${mediaQuery.minTablet} {
+    padding: 1rem 5rem;
+  }
 
   .image-bg {
     position: absolute;

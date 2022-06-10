@@ -1,8 +1,13 @@
 import React from "react";
 import styled from "styled-components";
-import {CobieneLogoLarge} from "../../images";
-import {faFacebook, faLinkedinIn, faTwitter, faWhatsapp} from "@fortawesome/free-brands-svg-icons";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import { CobieneLogoLarge } from "../../images";
+import {
+  faFacebook,
+  faLinkedinIn,
+  faTwitter,
+  faWhatsapp,
+} from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export const Footer = () => {
   return (
@@ -96,6 +101,7 @@ const Container = styled.div`
       list-style: none;
       display: flex;
       justify-content: center;
+      flex-wrap: wrap;
       position: relative;
       &:after {
         content: "";
@@ -115,8 +121,8 @@ const Container = styled.div`
           padding: 0 1rem;
           font-size: 0.8rem;
         }
-        &:last-child{
-          span{
+        &:last-child {
+          span {
             border-right: none;
           }
         }
