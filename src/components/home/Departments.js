@@ -31,9 +31,8 @@ const Container = styled.div`
 
   h1 {
     color: #fff;
-    margin: 5rem 0 3rem 0;
+    margin: 5rem 0 1rem 0;
     text-align: center;
-    font-family: "MontserratRegular";
   }
 
   hr {
