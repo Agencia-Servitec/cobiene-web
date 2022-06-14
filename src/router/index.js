@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import { BaseLayout } from "../components";
-import { Home } from "../pages";
+import {Home, SubDepartment} from "../pages";
 
 export const Router = () => {
   return (
@@ -14,6 +14,15 @@ export const Router = () => {
           </BaseLayout>
         }
       />
+        <Route
+            exact
+            path="/sub-departments/:departmentId"
+            element={
+                <BaseLayout>
+                    <SubDepartment />
+                </BaseLayout>
+            }
+        />
     </Routes>
   );
 };
