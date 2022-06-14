@@ -1,55 +1,57 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 import styled from "styled-components";
-import { CobieneLogoLarge } from "../../images";
-import { useDevice } from "../../hooks";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
-import { Drawer } from "./Drawer";
+import {CobieneLogoLarge} from "../../images";
+import {useDevice} from "../../hooks";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faBars} from "@fortawesome/free-solid-svg-icons";
+import {Drawer} from "./Drawer";
+import {Link} from "react-router-dom";
+import {Footer} from "./Footer";
 
-export const BaseLayout = ({ children }) => {
-  const { isMobile } = useDevice();
+export const BaseLayout = ({children}) => {
+    const {isMobile} = useDevice();
 
-  const [visibleDrawer, setVisibleDrawer] = useState(false);
+    const [visibleDrawer, setVisibleDrawer] = useState(false);
 
-  return (
-    <Container>
-      <Drawer
-        visibleDrawer={visibleDrawer}
-        onSetVisibleDrawer={setVisibleDrawer}
-      />
-      <div className="header">
-        {isMobile ? (
-          <div className="menu-mobile">
-            <div className="icon-bar" onClick={() => setVisibleDrawer(true)}>
-              <FontAwesomeIcon icon={faBars} size="2x" />
+    return (
+        <Container>
+            <Drawer
+                visibleDrawer={visibleDrawer}
+                onSetVisibleDrawer={setVisibleDrawer}
+            />
+            <div className="header">
+                {isMobile ? (
+                    <div className="menu-mobile">
+                        <div className="icon-bar" onClick={() => setVisibleDrawer(true)}>
+                            <FontAwesomeIcon icon={faBars} size="2x"/>
+                        </div>
+                    </div>
+                ) : (
+                    <div className="menu-list">
+                        <a href="#">
+                            <li>INICIO</li>
+                        </a>
+                        <a href="#about-us">
+                            <li>NOSOTROS</li>
+                        </a>
+                        <Link to='/'>
+                            <li>
+                                <img src={CobieneLogoLarge} alt="Cobiene logo"/>
+                            </li>
+                        </Link>
+                        <a href="#departments">
+                            <li>DEPARTAMENTOS</li>
+                        </a>
+                        <a href="#contact">
+                            <li>CONTÁCTO</li>
+                        </a>
+                    </div>
+                )}
             </div>
-          </div>
-        ) : (
-          <div className="menu-list">
-            <a href="#">
-              <li>INICIO</li>
-            </a>
-            <a href="#about-us">
-              <li>NOSOTROS</li>
-            </a>
-            <a href="#">
-              <li>
-                <img src={CobieneLogoLarge} alt="Cobiene logo" />
-              </li>
-            </a>
-            <a href="#departments">
-              <li>DEPARTAMENTOS</li>
-            </a>
-            <a href="#contact">
-              <li>CONTÁCTO</li>
-            </a>
-          </div>
-        )}
-      </div>
-      <div className="body">{children}</div>
-      {/*<div className="footer">Todos los derechos reservados</div>*/}
-    </Container>
-  );
+            <div className="body">{children}</div>
+            <Footer />
+        </Container>
+    );
 };
 
 const Container = styled.div`
@@ -90,12 +92,14 @@ const Container = styled.div`
         }
       }
     }
+
     .menu-mobile {
       width: 100%;
       display: flex;
       justify-content: flex-end;
       align-items: center;
       color: #fff;
+
       .icon-bar {
         width: auto;
         height: 100%;

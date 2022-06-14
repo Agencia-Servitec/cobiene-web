@@ -1,35 +1,41 @@
 import React from "react";
 import styled from "styled-components";
-import { ImgDefault } from "../../images";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlay } from "@fortawesome/free-solid-svg-icons";
+import {ImgDefault} from "../../images";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faPlay} from "@fortawesome/free-solid-svg-icons";
+import {useNavigate} from "react-router-dom";
 
-export const Department = ({ banner, title, url, titleLarge }) => {
-  return (
-    <Container>
-      <div className="item-picture">
-        <img src={banner || ImgDefault} alt="Image" />
-        <h1 className="item-department-name">{title}</h1>
-      </div>
-      <div className="item-title-card">
-        <h4> {titleLarge} </h4>
-      </div>
-      <div className="footer-card">
-        <div className="blog-divider-wrapper">
-          <div className="blog-divider" />
-        </div>
-        <div className="item-bottom">
-          <div className="item-more">
-            <div className="bottom-txt">
-              <a href={url} target="_blank">
-                <h5>VER MÁS</h5> <FontAwesomeIcon icon={faPlay} />
-              </a>
+export const Department = ({departmentId, banner, title, url, titleLarge, withSubDepartments = false}) => {
+    const navigate = useNavigate();
+
+    return (
+        <Container>
+            <div className="item-picture">
+                <img src={banner || ImgDefault} alt="Image"/>
+                <h1 className="item-department-name">{title}</h1>
             </div>
-          </div>
-        </div>
-      </div>
-    </Container>
-  );
+            <div className="item-title-card">
+                <h4> {titleLarge} </h4>
+            </div>
+            <div className="footer-card">
+                <div className="blog-divider-wrapper">
+                    <div className="blog-divider"/>
+                </div>
+                <div className="item-bottom">
+                    <div className="item-more">
+                        <div className="bottom-txt">
+                            <a href={url} target="_blank">
+                                <h5>Web url</h5>
+                            </a>
+                            {withSubDepartments && <span onClick={() => navigate(`/sub-departments/${departmentId}`)}>
+                            <h5>Ver más</h5> <FontAwesomeIcon icon={faPlay}/>
+                          </span>}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </Container>
+    );
 };
 
 const Container = styled.div`
@@ -52,6 +58,7 @@ const Container = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+
     &:before {
       content: "";
       background: rgba(0, 0, 0, 0.35);
@@ -63,11 +70,13 @@ const Container = styled.div`
       right: 0;
       bottom: 0;
     }
+
     img {
       width: 100%;
       height: 12rem;
       object-fit: cover;
     }
+
     .item-department-name {
       color: #fff;
       font-size: 3rem;
@@ -87,6 +96,7 @@ const Container = styled.div`
     display: flex;
     align-items: center;
     justify-content: flex-start;
+
     h4 {
       margin: 0;
     }
@@ -168,10 +178,13 @@ const Container = styled.div`
           align-items: center;
           justify-content: flex-start;
 
-          a {
+
+          a, span {
             display: flex;
             align-items: center;
             color: #fff;
+            margin-right: 0.9rem;
+            cursor: pointer;
 
             h5 {
               margin: 0 0.3rem 0 0;

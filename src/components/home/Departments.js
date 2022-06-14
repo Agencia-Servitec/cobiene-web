@@ -1,9 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import { Department } from "./Department";
-import { departments } from "../../data-list";
 
-export const Departments = () => {
+export const Departments = ({departments}) => {
   return (
     <Container id="departments">
       <h1>NUESTROS DEPARTAMENTOS</h1>
@@ -12,10 +11,12 @@ export const Departments = () => {
         {departments.map((department, index) => (
           <Department
             key={index}
+            departmentId={department.id}
             titleLarge={department.titleLarge}
             banner={department.banner}
             title={department.title}
             url={department.url}
+            withSubDepartments={department.withSubDepartments}
           />
         ))}
       </WrapperDepartments>

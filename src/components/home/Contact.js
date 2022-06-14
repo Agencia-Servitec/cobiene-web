@@ -1,18 +1,28 @@
 import React from "react";
 import styled from "styled-components";
-import { BannerContact } from "../../images";
-import { mediaQuery } from "../../styles/constants/mediaQuery";
+import {BannerContact} from "../../images";
+import {mediaQuery} from "../../styles/constants/mediaQuery";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faEnvelope} from "@fortawesome/free-solid-svg-icons";
 
 export const Contact = () => {
   return (
     <Container id="contact">
       <div className="content-items">
         <h1 className="title">Contáctanos</h1>
-        <div className="form-content">
-          <input type="text" placeholder="Ingrese email" /> <br />
-          <button type="submit">
-            <h4>Enviar</h4>
-          </button>
+        {/*<div className="form-content">*/}
+        {/*  <input type="text" placeholder="Ingrese email" /> <br />*/}
+        {/*  <button type="submit">*/}
+        {/*    <h4>Enviar</h4>*/}
+        {/*  </button>*/}
+        {/*</div>*/}
+        <div className="contact-email">
+            <li>
+                <FontAwesomeIcon icon={faEnvelope} size="lg" />
+            </li>
+            <a href="mailto:contacto@cobiene.com">
+            <h4>contacto@cobiene.com</h4>
+            </a>
         </div>
       </div>
       <img src={BannerContact} alt="Contact cobiene" className="image-bg" />
@@ -77,8 +87,20 @@ const Container = styled.div`
         cursor: pointer;
         h4 {
           margin: 0;
+          font-size: 10px;
+          
         }
       }
+    }
+    .contact-email{
+      display: flex;
+      position: relative;
+      list-style: none;
+      
+      li{
+        padding: 0 1rem;
+      }      
+      
     }
   }
 `;

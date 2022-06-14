@@ -9,10 +9,7 @@ export const AboutUs = () => {
       <div className="content-items">
         <h1 className="title">¿QUIENE SOMOS?</h1>
         <div className="description">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi autem
-          dolore dolorum, eaque facilis ipsa omnis quo! Adipisci, blanditiis
-          dicta dolorem fugit labore, magnam, maxime numquam obcaecati optio
-          quos ullam!
+            Este comando con el firme compromiso , servicio de promover y desarrollar actividades que aseguren el bienestar del personal de la institución y de sus familiares directos, con la finalidad de contribuir a elevar su moral y rendimiento.
         </div>
       </div>
       <img src={BannerContact} alt="Contact cobiene" className="image-bg" />

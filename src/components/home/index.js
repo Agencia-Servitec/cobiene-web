@@ -3,4 +3,4 @@ export * from "./AboutUs";
 export * from "./Departments";
 export * from "./Department";
 export * from "./Contact";
-export * from "./Footer";
+export * from "../layout/Footer";

@@ -6,7 +6,9 @@ import {
   faLinkedinIn,
   faTwitter,
   faWhatsapp,
+
 } from "@fortawesome/free-brands-svg-icons";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export const Footer = () => {
@@ -25,9 +27,9 @@ export const Footer = () => {
       </div>
       <div className="list-menu">
         <ul>
-          <li>
+          {/*<li>
             <span>LEGAL</span>
-          </li>
+          </li>*/}
           <li>
             <span>TERMINOS Y CONDICIONES</span>
           </li>
