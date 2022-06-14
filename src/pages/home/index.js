@@ -1,12 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import {
-  AboutUs,
-  Carousel,
-  Contact,
-  Departments,
-  Footer,
-} from "../../components";
+import {AboutUs, Carousel, Contact, Departments,} from "../../components";
+import {departments} from "../../data-list";
 
 export const Home = () => {
   return (
@@ -14,10 +9,9 @@ export const Home = () => {
       <Carousel />
       <AboutUs />
       <WrapperComponents>
-        <Departments />
+        <Departments departments={departments}/>
       </WrapperComponents>
       <Contact />
-      <Footer />
     </Container>
   );
 };
