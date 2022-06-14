@@ -14,3 +14,6 @@ export { default as BannerAcmp } from "./others/banner-acmp.webp";
 export { default as BannerBce } from "./others/banner-bce.webp";
 export { default as BannerCmsts } from "./others/banner-cmsts.webp";
 export { default as BannerTramites } from "./others/banner-tramites.webp";
+export { default as BannerDiscapacitado } from "./others/apoyodiscapacitado.webp";
+export { default as BannerApoyoEconomico } from "./others/apoyoeconomico.webp";
+export { default as BannerApoyoEducativo } from "./others/apoyoeducativo.webp";
