@@ -10,10 +10,12 @@ export const Department = ({departmentId, banner, title, url, titleLarge, withSu
 
     return (
         <Container>
+            <a href={url} target="_blank">
             <div className="item-picture">
                 <img src={banner || ImgDefault} alt="Image"/>
                 <h1 className="item-department-name">{title}</h1>
             </div>
+            </a>
             <div className="item-title-card">
                 <h4> {titleLarge} </h4>
             </div>
