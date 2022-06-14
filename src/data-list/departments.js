@@ -7,14 +7,13 @@ export const departments = [
         title:"jace",
         titleLarge: "Jefatura de Administración de Casas del Ejercito",
         banner: BannerJace,
-        url: "https://www.gob.pe/15287-solicitar-asignacion-de-casa-de-servicio-temporal-a-la-jefatura-de-administracion-de-casas-del-ejercito-jace",
+
     },
     {
         id:"jas-02",
         title:"jas",
         titleLarge: "Jefatura de Apoyo Social",
         banner: BannerJas,
-        url: "",
         withSubDepartments: true
     },
     {
@@ -22,7 +21,7 @@ export const departments = [
         title:"jae",
         banner: BannerJae,
         titleLarge: "Jefatura de Apoyo Educativo",
-        url: "http://jeduce.ejercito.mil.pe/"
+
     },
     {
         id:"fossep-04",
