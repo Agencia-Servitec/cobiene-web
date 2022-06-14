@@ -9,7 +9,7 @@ export const subDepartments = [
         title:"sad",
         titleLarge: "Sección de Apoyo al Discapacitado",
         banner: BannerDiscapacitado,
-        url: ""
+
      },
 
     {
@@ -18,7 +18,7 @@ export const subDepartments = [
         title:"saed",
         titleLarge: "Sección de Apoyo Educativo",
         banner: BannerApoyoEducativo,
-        url: ""
+
     },
 
     {
@@ -27,7 +27,8 @@ export const subDepartments = [
         title:"saeco",
         titleLarge: "Sección de Apoyo Economico",
         banner: BannerApoyoEconomico,
-        url: ""
+
+
     },
 
 
