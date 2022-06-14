@@ -49,7 +49,7 @@ export const departments = [
         title:"bce",
         banner: BannerBce,
         titleLarge: "Bazar Central del Ejercito",
-        url: "www.tubazar.com.pe"
+        url: "http://www.tubazar.com.pe/"
     },
     {
         id:"cmsts-08",
