@@ -1,14 +1,11 @@
 import React from "react";
 import AntCarousel from "antd/lib/carousel";
-import { Slider1, Slider2, Slider3 } from "../../images";
+import {Slider1, Slider3, SliderNew} from "../../images";
 import styled from "styled-components";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faChevronLeft,
-  faChevronRight,
-} from "@fortawesome/free-solid-svg-icons";
-import { useDevice } from "../../hooks";
-import { mediaQuery } from "../../styles/constants/mediaQuery";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faChevronLeft, faChevronRight,} from "@fortawesome/free-solid-svg-icons";
+import {useDevice} from "../../hooks";
+import {mediaQuery} from "../../styles/constants/mediaQuery";
 
 export const Carousel = () => {
   const { isMobile } = useDevice();
@@ -29,7 +26,7 @@ export const Carousel = () => {
           alt="Banner cobiene"
         />
         <Slide
-          src={Slider2}
+          src={SliderNew}
           width={isMobile ? "768" : "992"}
           height="670"
           alt="Banner cobiene"
