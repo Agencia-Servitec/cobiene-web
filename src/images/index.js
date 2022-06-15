@@ -17,3 +17,4 @@ export { default as BannerTramites } from "./others/banner-tramites.webp";
 export { default as BannerDiscapacitado } from "./others/apoyodiscapacitado.webp";
 export { default as BannerApoyoEconomico } from "./others/apoyoeconomico.webp";
 export { default as BannerApoyoEducativo } from "./others/apoyoeducativo.webp";
+export { default as SliderNew } from "./others/slider-new1.webp";
