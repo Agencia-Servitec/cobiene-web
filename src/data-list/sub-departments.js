@@ -9,6 +9,7 @@ export const subDepartments = [
         title:"sad",
         titleLarge: "Sección de Apoyo al Discapacitado",
         banner: BannerDiscapacitado,
+        url:"https://sad.cobiene.mil.pe/",
 
      },
 

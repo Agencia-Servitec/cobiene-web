@@ -7,6 +7,7 @@ export const departments = [
         title:"jace",
         titleLarge: "Jefatura de Administración de Casas del Ejercito",
         banner: BannerJace,
+        url:"http://jace.cobiene.mil.pe/",
 
     },
     {
