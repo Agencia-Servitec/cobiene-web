@@ -22,6 +22,7 @@ export const departments = [
         title:"jae",
         banner: BannerJae,
         titleLarge: "Jefatura de Apoyo Educativo",
+        url:"https://jae.cobiene.mil.pe/"
 
     },
     {

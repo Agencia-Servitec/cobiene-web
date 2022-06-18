@@ -28,6 +28,7 @@ export const subDepartments = [
         title:"saeco",
         titleLarge: "Sección de Apoyo Economico",
         banner: BannerApoyoEconomico,
+        url:"https://saeco.cobiene.mil.pe/",
 
 
     },
