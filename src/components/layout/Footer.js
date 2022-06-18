@@ -10,13 +10,16 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {Link} from "react-router-dom";
 
 export const Footer = () => {
   return (
     <Container>
       <div className="item-logo-footer">
         <div className="item-logo">
+          <Link to='/'>
           <img src={CobieneLogoLarge} alt="Cobiene logo" />
+          </Link>
         </div>
         <div className="item-text">
           <h1>COBIENE</h1>
