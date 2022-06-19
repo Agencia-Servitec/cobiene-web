@@ -96,6 +96,8 @@ const Container = styled.div`
       display: flex;
       position: relative;
       list-style: none;
+      padding: 2.5rem;
+      font-size: 23px;
       
       li{
         padding: 0 1rem;

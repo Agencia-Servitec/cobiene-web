@@ -8,14 +8,20 @@ import {useNavigate} from "react-router-dom";
 export const Department = ({departmentId, banner, title, url, titleLarge, withSubDepartments = false}) => {
     const navigate = useNavigate();
 
+    const redirectDepartment = () =>{
+        if(withSubDepartments) return navigate(`/sub-departments/${departmentId}`);
+
+        return  window.open(url, "_blank");
+    }
+
     return (
         <Container>
-            <a href={url} target="_blank">
-            <div className="item-picture">
+
+            <div className="item-picture" onClick={()=> redirectDepartment()}>
                 <img src={banner || ImgDefault} alt="Image"/>
                 <h1 className="item-department-name">{title}</h1>
             </div>
-            </a>
+
             <div className="item-title-card">
                 <h4> {titleLarge} </h4>
             </div>
@@ -60,6 +66,7 @@ const Container = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 
     &:before {
       content: "";
