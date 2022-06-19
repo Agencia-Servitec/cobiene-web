@@ -7,6 +7,7 @@ import {faBars} from "@fortawesome/free-solid-svg-icons";
 import {Drawer} from "./Drawer";
 import {Link} from "react-router-dom";
 import {Footer} from "./Footer";
+import {ButtonsFloating} from "../ui/ButtonsFloating";
 
 export const BaseLayout = ({children}) => {
     const {isMobile} = useDevice();
@@ -49,7 +50,8 @@ export const BaseLayout = ({children}) => {
                 )}
             </div>
             <div className="body">{children}</div>
-            <Footer />
+            <Footer/>
+            <ButtonsFloating/>
         </Container>
     );
 };
