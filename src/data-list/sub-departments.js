@@ -19,6 +19,7 @@ export const subDepartments = [
         title:"saed",
         titleLarge: "Sección de Apoyo Educativo",
         banner: BannerApoyoEducativo,
+        url: "https://saed.cobiene.mil.pe/",
 
     },
 
