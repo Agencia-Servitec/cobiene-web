@@ -96,11 +96,11 @@ const Container = styled.div`
       display: flex;
       position: relative;
       list-style: none;
-      padding: 2.5rem;
+      padding: 1.5rem 0;
       font-size: 23px;
       
       li{
-        padding: 0 1rem;
+        padding: 0 1rem 0 0;
       }      
       
     }

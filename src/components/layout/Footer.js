@@ -1,15 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import { CobieneLogoLarge } from "../../images";
-import {
-  faFacebook,
-  faLinkedinIn,
-  faTwitter,
-  faWhatsapp,
+import {CobieneLogoLarge} from "../../images";
+import {faFacebook, faWhatsapp,} from "@fortawesome/free-brands-svg-icons";
 
-} from "@fortawesome/free-brands-svg-icons";
-
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {Link} from "react-router-dom";
 
 export const Footer = () => {
@@ -30,9 +24,6 @@ export const Footer = () => {
       </div>
       <div className="list-menu">
         <ul>
-          {/*<li>
-            <span>LEGAL</span>
-          </li>*/}
           <li>
             <span>TERMINOS Y CONDICIONES</span>
           </li>
@@ -47,23 +38,21 @@ export const Footer = () => {
       <div className="items-socials">
         <ul>
           <li>
+            <a href={`https://api.whatsapp.com/send?phone=929054672`} target="_blank">
             <FontAwesomeIcon icon={faWhatsapp} />
+            </a>
           </li>
           <li>
-            <FontAwesomeIcon icon={faLinkedinIn} />
-          </li>
-          <li>
-            <FontAwesomeIcon icon={faTwitter} />
-          </li>
-          <li>
+            <a href="https://www.facebook.com/BienestarEP" target="_blank">
             <FontAwesomeIcon icon={faFacebook} />
+            </a>
           </li>
         </ul>
       </div>
       <div className="bottom-footer">
         <div>
           © Copyright 2022 - COBIENE - Diseñado por{" "}
-          <a href="#">Agencia Servitec</a>
+          <a href="https://agenciaservitec.com/" target="_blank">Agencia Servitec</a>
         </div>
       </div>
     </Container>
@@ -146,6 +135,10 @@ const Container = styled.div`
         color: #fff;
         padding: 0 1rem;
         font-size: 2.5rem;
+        cursor: pointer;
+        a{
+          color: #fff;
+        }
       }
     }
   }

@@ -1,5 +1,4 @@
-import {BannerJace, BannerDiscapacitado, BannerApoyoEconomico, BannerApoyoEducativo} from "../images";
-
+import {BannerApoyoEconomico, BannerApoyoEducativo, BannerDiscapacitado} from "../images";
 
 export const subDepartments = [
 
