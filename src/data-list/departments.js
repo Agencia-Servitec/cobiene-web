@@ -12,7 +12,7 @@ export const departments = [
     },
     {
         id:"jas-02",
-        title:"jas",
+        title:"dae",
         titleLarge: "Jefatura de Apoyo Social",
         banner: BannerJas,
         withSubDepartments: true

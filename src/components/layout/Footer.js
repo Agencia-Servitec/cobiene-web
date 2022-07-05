@@ -38,12 +38,12 @@ export const Footer = () => {
       <div className="items-socials">
         <ul>
           <li>
-            <a href={`https://api.whatsapp.com/send?phone=929054672`} target="_blank">
+            <a href={`https://api.whatsapp.com/send?phone=929054672`} target="_blank" rel="noreferrer">
             <FontAwesomeIcon icon={faWhatsapp} />
             </a>
           </li>
           <li>
-            <a href="https://www.facebook.com/BienestarEP" target="_blank">
+            <a href="https://www.facebook.com/BienestarEP" target="_blank" rel="noreferrer">
             <FontAwesomeIcon icon={faFacebook} />
             </a>
           </li>
@@ -52,7 +52,7 @@ export const Footer = () => {
       <div className="bottom-footer">
         <div>
           © Copyright 2022 - COBIENE - Diseñado por{" "}
-          <a href="https://agenciaservitec.com/" target="_blank">Agencia Servitec</a>
+          <a href="https://agenciaservitec.com/" target="_blank" rel="noreferrer">Agencia Servitec</a>
         </div>
       </div>
     </Container>
