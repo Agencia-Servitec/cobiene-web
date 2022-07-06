@@ -1,6 +1,6 @@
-import React from "react";
+import React, {useEffect} from "react";
 import styled from "styled-components";
-import {Carousel, Departments,} from "../../components";
+import { Departments} from "../../components";
 import {subDepartments} from "../../data-list";
 import {useParams} from "react-router-dom";
 
@@ -10,11 +10,15 @@ export const SubDepartment = () => {
 
     const subDepartmentsView = subDepartments.filter((subDepartment) =>
         subDepartment.departmentId === departmentId
+
     );
+    useEffect(()=>{
+        window.scrollTo(0,0);
+
+    },[]);
 
     return (
         <Container>
-            <Carousel/>
             <WrapperComponents>
                 <Departments departments={subDepartmentsView}/>
             </WrapperComponents>
@@ -32,4 +36,5 @@ const WrapperComponents = styled.div`
   max-width: 1250px;
   height: auto;
   margin: auto;
+  padding-top: 130px;
 `;

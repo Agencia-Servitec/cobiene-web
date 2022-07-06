@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import {ImgDefault} from "../../images";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faPlay} from "@fortawesome/free-solid-svg-icons";
+import {faLink, faPlay} from "@fortawesome/free-solid-svg-icons";
 import {useNavigate} from "react-router-dom";
 
 export const Department = ({departmentId, banner, title, url, titleLarge, withSubDepartments = false}) => {
@@ -33,7 +33,7 @@ export const Department = ({departmentId, banner, title, url, titleLarge, withSu
                     <div className="item-more">
                         <div className="bottom-txt">
                             <a href={url} target="_blank">
-                                <h5>Web url</h5>
+                                <h5>Web url</h5><FontAwesomeIcon icon={faLink}/>
                             </a>
                             {withSubDepartments && <span onClick={() => navigate(`/sub-departments/${departmentId}`)}>
                             <h5>Ver más</h5> <FontAwesomeIcon icon={faPlay}/>

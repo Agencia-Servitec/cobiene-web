@@ -11,18 +11,19 @@ export const departments = [
 
     },
     {
-        id:"jas-02",
-        title:"dae",
-        titleLarge: "Jefatura de Apoyo Social",
-        banner: BannerJas,
-        withSubDepartments: true
-    },
-    {
         id:"jae-03",
         title:"jae",
         banner: BannerJae,
         titleLarge: "Jefatura de Apoyo Educativo",
         url:"https://jae.cobiene.mil.pe/"
+
+    },
+    {
+        id:"dae-02",
+        title:"dae",
+        titleLarge: "Jefatura de Apoyo Social",
+        banner: BannerJas,
+        withSubDepartments: true
 
     },
     {
