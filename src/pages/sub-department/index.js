@@ -1,29 +1,36 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
-import { Departments} from "../../components";
-import {subDepartments} from "../../data-list";
-import {useParams} from "react-router-dom";
+import { Departments } from "../../components";
+import { departments, subDepartments } from "../../data-list";
+import { useParams } from "react-router-dom";
 
 export const SubDepartment = () => {
+  const { departmentId } = useParams();
 
-    const {departmentId} = useParams();
+  const subDepartmentsView = subDepartments.filter(
+    (subDepartment) => subDepartment.departmentId === departmentId
+  );
 
-    const subDepartmentsView = subDepartments.filter((subDepartment) =>
-        subDepartment.departmentId === departmentId
+  const department = departments.filter(
+    (department) => department.id === departmentId
+  );
 
-    );
-    useEffect(()=>{
-        window.scrollTo(0,0);
+  const titleLargeDepartment = department[0].titleLarge;
 
-    },[]);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
-    return (
-        <Container>
-            <WrapperComponents>
-                <Departments departments={subDepartmentsView}/>
-            </WrapperComponents>
-        </Container>
-    );
+  return (
+    <Container>
+      <WrapperComponents>
+        <Departments
+          titleLargeDepartment={titleLargeDepartment}
+          departments={subDepartmentsView}
+        />
+      </WrapperComponents>
+    </Container>
+  );
 };
 
 const Container = styled.div`

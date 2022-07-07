@@ -2,10 +2,12 @@ import React from "react";
 import styled from "styled-components";
 import { Department } from "./Department";
 
-export const Departments = ({departments}) => {
+export const Departments = ({ titleLargeDepartment, departments }) => {
   return (
     <Container id="departments">
-      <h1>NUESTROS DEPARTAMENTOS</h1>
+      <h1>
+        {titleLargeDepartment ? titleLargeDepartment : "NUESTROS DEPARTAMENTOS"}
+      </h1>
       <hr />
       <WrapperDepartments>
         {departments.map((department, index) => (
@@ -34,6 +36,7 @@ const Container = styled.div`
     color: #fff;
     margin: 5rem 0 1rem 0;
     text-align: center;
+    text-transform: uppercase;
   }
 
   hr {

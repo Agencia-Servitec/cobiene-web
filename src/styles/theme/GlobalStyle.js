@@ -17,6 +17,7 @@ const global = css`
     background: #181818;
     color: #fff;
     font-family: "MontserratRegular", serif;
+    overflow-x: hidden;
   }
 
   h1,
